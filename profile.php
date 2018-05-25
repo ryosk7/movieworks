@@ -88,7 +88,7 @@
   </script>
 
 </head>
-<body>
+
 
   <section id="top">
       <header class="Header l-column blue_bg">

@@ -125,6 +125,7 @@
       <body>
 
         <div class="wrapper">
+          <section class="mainContent">
           <div class="container">
             <div class="matching">
               <h3>matching!</h3>
@@ -137,9 +138,13 @@
               <p>プロフィール</p>
               <p>連絡先</p>
             </div>
-          </div>
+            </div>
+          </section>
+
+        </div>
 
 
+          <!-- ーーーーーーーーーーーーーーーーーfooterーーーーーーーーーーーーーーーーーーーーーー -->
 
           <footer>
             <div id="footer" class="footer-content blue_bg">
@@ -184,6 +189,6 @@
               </div><!-- .pdd95 -->
             </div><!-- #footer -->
           </footer>
-        </div>
+
       </body>
       </html>
