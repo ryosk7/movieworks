@@ -1,4 +1,7 @@
+<?php require_once 'vendor/autoload.php';  ?>
 <?php
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 // アプリケーション設定
 define('CONSUMER_KEY', $_ENV['CONSUMER_KEY']);
 define('CALLBACK_URL', 'http://localhost/movieworks/redirect.php');

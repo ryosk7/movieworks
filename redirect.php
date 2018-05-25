@@ -1,4 +1,7 @@
+<?php require_once 'vendor/autoload.php';  ?>
 <?php
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 // アプリケーション設定
 define('CONSUMER_KEY', $_ENV['CONSUMER_KEY']);
 define('CONSUMER_SECRET', $_ENV['CONSUMER_SECRET']);
@@ -69,7 +72,7 @@ $p_id = "root";
 $p_pass = "";
 
 $pdo = new PDO("mysql:dbname={$db_name};
-								host={$host_name}; charset=utf8mb4",
+								host={$host_name}; charset=utf8",
 								"{$p_id}", "{$p_pass}");
 
 if (!$pdo) {
