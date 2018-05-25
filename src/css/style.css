@@ -76,7 +76,7 @@ padding-top: 30px;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #d3032b;
+  background-color: #2793e6c4;
   height: 64px;
 }
 
@@ -148,7 +148,7 @@ padding-top: 30px;
 }
 
 .blue_bg {
-  background: #d3032b url(https://ringo-applepie.com/wp-content/themes/ringo/assets/img/background_red.png) repeat repeat bottom center;
+  background: #2793e6c4 url(https://ringo-applepie.com/wp-content/themes/ringo/assets/img/background_red.png) repeat repeat bottom center;
   background-size: 784px 1108px;
   width: 100%;
   font-weight: 700;
