@@ -1,7 +1,7 @@
 <?php
 // アプリケーション設定
-define('CONSUMER_KEY', '261474477893-n0otdcerub0luna8snok7pe4t0spgbcu.apps.googleusercontent.com');
-define('CONSUMER_SECRET', '3oSKisiSqIcOw7-oLz4CDNA-');
+define('CONSUMER_KEY', $_ENV['CONSUMER_KEY']);
+define('CONSUMER_SECRET', $_ENV['CONSUMER_SECRET']);
 define('CALLBACK_URL', 'http://localhost/movieworks/redirect.php');
 
 // URL
