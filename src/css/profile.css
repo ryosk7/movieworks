@@ -1,8 +1,14 @@
+.prof-body{
+  /* width: 400px; */
+  height: 800px;
+
+}
 
 .prof-text{
   position: relative;
   float: left;
-  width: 50%;
+  /* width: 50%; */
+  width: 640px;
 }
 
 .prof-title {
