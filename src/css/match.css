@@ -8,13 +8,15 @@
   margin:auto;
 }
 .matching h3 {
+  color:#5d6f77;
+  text-shadow: 3px 3px #fff, 4px 4px 0 #5d6f77, 4px 2px 0 #5d6f77, 2px 4px 0 #5d6f77, 2px 2px 0 #5d6f77;
   font-size: 70px;
-
   margin: 0px;
 }
 .matching p {
   font-size: 20px;
   margin: 0px;
+  text-align: center;
 }
 
 .profile_img {
@@ -23,20 +25,30 @@
   float:left;
   margin-top:100px;
   margin-left: 200px;
-  border:1px solid gray;
+  border:1px solid #a1dae6;
   border-radius: 50%;
 }
 .profile_img img{
   width: 200px;
   height: 200px;
   margin-top:40px;
-  margin-left:40px;
+  margin-left:50px;
 }
 .profile_text {
   width: 35%;
-  height: 500px;
-  border:1px solid gray;
+  height: 300px;
   float:right;
   margin-top:100px;
-  margin-right: 250px;
+  margin-right: 120px;
+  padding:20px;
+  color: #FFF;
+  background: #a1dae6;
+  border-bottom: solid 6px #a1dae6;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+.profile_text p {
+  font-size: 30px;
+    margin: 0;
+    padding: 0;
 }
