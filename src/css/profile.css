@@ -1,14 +1,37 @@
-.prof-body{
-  /* width: 400px; */
-  height: 800px;
 
+.prof-all{
+  
+}
+.prof-body{
+  width: 960px;
+  margin: 50px auto;
+  padding: 25px 0px 0px 120px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 7px;
+  box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 );
+
+  height: 1133px;
+
+}
+.prof-icon{
+  width: 100px;
+  /* margin: auto; */
+  margin-top: 30px;
+  margin-left: 325px;
+  margin-bottom: 140px;
+}
+.prof-icon h1{
+  font-size: 44px;
+  width: 320px;
+  margin-left: -3px;
 }
 
 .prof-text{
   position: relative;
   float: left;
-  /* width: 50%; */
-  width: 640px;
+  width: 50%;
+  /* width: 640px; */
 }
 
 .prof-title {
