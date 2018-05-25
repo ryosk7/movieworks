@@ -1,0 +1,53 @@
+
+
+/* ボタン */
+#statrt_btn{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    float:left;
+    outline: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: #3498db solid 4px;
+    cursor:pointer;
+    background-color: #3498db;
+    color:white;
+    font-size:24px;
+    padding-top:22px;
+    padding-bottom:22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  margin:0 auto;
+  font-weight:700;
+}
+
+#statrt_btn:hover{
+    background-color: rgba(0,0,0,0);
+    color: #0493bd;
+}
+
+.btn-body {
+    width: 100px;
+    margin: auto;
+}
+
+/* .submit:hover {
+    color: #3498db;
+} */
+
+/* .ease {
+    width: 0px;
+    height: 74px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+} */
