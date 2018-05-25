@@ -149,7 +149,7 @@
         </div>
       </div>
     </section>
-
+    </div>
 
 
 
@@ -197,6 +197,6 @@
         </div><!-- .pdd95 -->
       </div><!-- #footer -->
     </footer>
-  </div>
+
 </body>
 </html>
