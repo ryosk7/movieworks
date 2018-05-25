@@ -22,12 +22,12 @@ body, html {
 
 
 .mainContent {
-  width: 90%;
+  /* width: 90%;
 margin: auto;
 padding-top: 30px;
   transition: opacity .2s;
   opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; */
   /* margin: 50px 0px 0px 70px; */
 }
 
@@ -39,7 +39,7 @@ padding-top: 30px;
   align-items: center;
   min-height: 69px;
   background-color: #d3032b;
-  max-width: 1360px;
+  /* max-width: 1360px; */
 }
 
 .l-column {
