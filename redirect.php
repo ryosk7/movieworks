@@ -1,5 +1,7 @@
 <?php require_once 'vendor/autoload.php';  ?>
 <?php
+session_start();
+
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 // アプリケーション設定
@@ -111,5 +113,7 @@ if (!$regist) {
 	</table>
 	<h2>プロフィール画像</h2>
 	<img src="<?php echo $result['picture']; ?>" width="100">
+	<br>
+	<?=$htmlBody?>
 </body>
 </html>
