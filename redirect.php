@@ -66,7 +66,7 @@ echo strlen($access_token);
 ?>
 
 <?php
-$db_name = "movieworks";
+$db_name = $_ENV['DB_NAME'];
 $host_name = "localhost";
 $p_id = "root";
 $p_pass = "";

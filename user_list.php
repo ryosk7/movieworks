@@ -1,8 +1,13 @@
+<?php require_once 'vendor/autoload.php';  ?>
+<?php
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+?>
 <?php
 
 define('INFO_URL', 'https://www.googleapis.com/oauth2/v1/userinfo');
 
-$db_name = "movieworks";
+$db_name = $_ENV['DB_NAME'];
 $host_name = "localhost";
 $p_id = "root";
 $p_pass = "";
