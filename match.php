@@ -1,3 +1,46 @@
+<?php
+session_start();
+// $id=$_SESSION["id"];
+define('INFO_URL', 'https://www.googleapis.com/oauth2/v1/userinfo');
+
+$db_name = "movieworks";
+$host_name = "localhost";
+$p_id = "root";
+$p_pass = "";
+
+
+$pdo = new PDO("mysql:dbname={$db_name};
+								host={$host_name}; charset=utf8mb4",
+								"{$p_id}", "{$p_pass}");
+
+
+$list = $pdo -> prepare("SELECT * FROM token WHERE id LIKE 1");
+$list -> execute();
+
+if (!$list) {
+	echo "ERROR";
+}else {
+	echo <<< EOM
+
+EOM;
+
+ while ($data = $list -> fetch()) {
+	 $access_token = $data["u_token"];
+	 $u_id= $data["u_id"];
+ }
+}
+
+$params = array('access_token' => $access_token);
+
+// ユーザー情報取得
+$res = file_get_contents(INFO_URL . '?' . http_build_query($params));
+
+//表示
+$result = json_decode($res, true);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -129,7 +172,7 @@
           <div class="container">
             <div class="matching">
               <h3>matching!</h3>
-              <p>○○さんへの申請が承認されました</p>
+              <p><?php echo $result["name"]; ?>さんへの申請が承認されました</p>
             </div>
             <div class="profile_img">
               <img src="src/img/3.jpg" alt="">

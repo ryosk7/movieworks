@@ -25,6 +25,7 @@ EOM;
 
  while ($data = $list -> fetch()) {
 	 $access_token = $data["u_token"];
+	 $u_id= $data["u_id"];
  }
 }
 

@@ -80,7 +80,7 @@ if (!$pdo) {
 }
 
 $regist = $pdo -> prepare("INSERT INTO token (
-															u_token
+															u_token, u_id
 													)VALUES(?)");
 $regist -> bindParam("u_token",$access_token);
 
