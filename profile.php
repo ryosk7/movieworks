@@ -1,3 +1,49 @@
+<?php
+ session_start();
+ // $u_id = $_SESSION["id"];
+ // $name = $_SESSION["name"];
+ // $picture = $_SESSION["picture"];
+ ?>
+
+ <?php
+
+ define('INFO_URL', 'https://www.googleapis.com/oauth2/v1/userinfo');
+
+ $db_name = "movieworks";
+ $host_name = "localhost";
+ $p_id = "root";
+ $p_pass = "";
+
+ $pdo = new PDO("mysql:dbname={$db_name};
+ 								host={$host_name}; charset=utf8mb4",
+ 								"{$p_id}", "{$p_pass}");
+
+
+ $list = $pdo -> prepare("SELECT * FROM token");
+
+ $list -> execute();
+
+ if (!$list) {
+ 	echo "ERROR";
+ }else {
+ 	echo <<< EOM
+
+EOM;
+
+  while ($data = $list -> fetch()) {
+ 	 $access_token = $data["u_token"];
+  }
+ }
+
+ $params = array('access_token' => $access_token);
+
+ // ユーザー情報取得
+ $res = file_get_contents(INFO_URL . '?' . http_build_query($params));
+
+ //表示
+ $result = json_decode($res, true);
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,25 +142,25 @@ $(function() {
     <div class="Header__head">
       <div class="nav_sp" style="display: none;">
         <ul class="Menu">
-          <li><a href="#top"  onclick="nav_close()">TOP</a></li>
-          <li><a href="#section-target"  onclick="nav_close()">ABOUT</a></li>
-          <li><a href="#workSection"  onclick="nav_close()">WORK</a></li>
-          <li><a href="https://www.wantedly.com/users/24156855"  onclick="nav_close()">CONTACT</a></li>
+          <li><a href="#top"  onclick="nav_close()">home</a></li>
+          <li><a href="#section-target"  onclick="nav_close()">profile</a></li>
+          <li><a href="#workSection"  onclick="nav_close()">gallery</a></li>
+          <li><a href=""  onclick="nav_close()">push</a></li>
         </ul>
 
       </div>
       <div id="nav">
         <div class="nav_cont">
-          <a href="index.html">
-            <div class="home_btn">
 
+            <div class="home_btn">
+              <a href="index.html"><img src="src/img/MW_Logo.png" alt="" class="movieworks_logo"></a>
             </div>
-          </a>
+
           <ul>
-            <li><a href="#top">TOP</a></li>
-            <li><a href="#section-target">ABOUT</a></li>
-            <li><a href="#workSection">WORK</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#"><img src="src/img/home.png" alt="" class="header_icon"><p>home</p></a></li>
+            <li><a href="#"><img src="src/img/prof.png" alt="" class="header_icon"><p>profile</p></a></li>
+            <li><a href="#"><img src="src/img/serch.png" alt="" class="header_icon"><p>gallery</p></a></li>
+            <li><a href="#"><img src="src/img/note.png" alt="" class="header_icon"><p>push</p></a></li>
           </ul>
           <a id="menu_btn" href="javascript:void(0)" onclick="nav_open()" class="nav_menu_btn">&Congruent;
           </a>
@@ -128,36 +174,57 @@ $(function() {
           <div class="prof-all">
           <div class="prof-body">
             <div class="prof-icon">
-              <img src="src/img/icon.jpeg" alt="">
-              <h1>Yukio Orita</h1>
+              <img src="<?php echo $result['picture'] ?>" alt="">
+              <h1><?php echo $result['name'] ?></h1>
             </div>
+
             <div class="prof-text">
+
+              <div class="movie_up_btn">
+                <input type="button" id="movie_button" value="  MOVIE UPLOAD  " />
+              </div>
+
+              <div class="prof-movie">
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <div class="prof_prof">
+
+
               <h3 class="prof-title">Profile</h3>
               <form action="" method="post" id="mail_form">
-                <dl>
+                <table>
+                  <tr >
 
-                  <dt> メールアドレス <span></span></dt>
-                  <dd class="required">
+                  <th>mail</th>
+                  <td class="required">
                     AAAAAAAA＠gmail.com
-                  </dd>
-
-                  <dt> 地域 <span></span></dt>
-                  <dd class="required">
+                  </td>
+                  </tr>
+                  <th>area</th>
+                  <td class="required">
                     大日本帝国
-                  </dd>
-
-                  <dt> プロフィール <span></span></dt>
-                  <dd class="required"><textarea id="mail_contents" name="mail_contents" cols="40" rows="10"></textarea></dd>
-                </dl>
-
-                <p id="form_submit">
-                  <input type="button" id="form_submit_button" value="  更新  " />
-                </p>
+                  </td>
+                  </tr>
+                  <tr>
+                    <th>profile</th>
+                    <td class="required"><textarea id="mail_contents" name="mail_contents" cols="40" rows="10"></textarea></td>
+                  </tr>
+                  <tr >
+                    <td colspan="2">
+                    <input type="button" id="form_submit_button" value="  UPDATE  " />
+                    </td>
+                  </tr>
+                </table>
               </form>
+              </div>
             </div>
-            <div class="prof-movie">
-              <iframe width="350" height="230" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
-            </div>
+
           </div>
           </div>
         </section>
@@ -172,7 +239,7 @@ $(function() {
             <div class="inner">
               <div class="cf">
                 <div class="left">
-                  <a class="logo" href="#"></a>
+                  <a class="logo" href="#"><img src="src/img/MW_Logo.png" alt=""></a>
                   <p>© PHPkenshu all rights reserved.</p>
                 </div><!-- .left -->
                 <div class="right">
@@ -181,7 +248,9 @@ $(function() {
                     <li class="facebook sbtn">
                       <a href="#" target="_blank">
                         <div class="sbtn_in">
-                          <p class="icon-facebook"></p>
+                          <!-- <p class="icon-facebook"> -->
+                            <img src="src/img/icon_face.png" alt="">
+                           <!-- </p> -->
                           <div class="slide reset"><span class="icon-facebook"></span></div>
                         </div>
                       </a>
@@ -189,7 +258,8 @@ $(function() {
                     <li class="twitter sbtn">
                       <a href="#" target="_blank">
                         <div class="sbtn_in">
-                          <p class="icon-twitter"></p>
+                          <!-- <p class="icon-twitter"></p> -->
+                          <img src="src/img/icon_twitter.png" alt="">
                           <div class="slide reset"><span class="icon-twitter"></span></div>
                         </div>
                       </a>
@@ -197,7 +267,8 @@ $(function() {
                     <li class="instagram sbtn">
                       <a href="#" target="_blank">
                         <div class="sbtn_in">
-                          <p class="icon-instagram"></p>
+                          <!-- <p class="icon-instagram"></p> -->
+                          <img src="src/img/icon_insta.png" alt="">
                           <div class="slide reset"><span class="icon-instagram"></span></div>
                         </div>
                       </a>

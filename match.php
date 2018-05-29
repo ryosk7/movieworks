@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="src/css/match.css">
   <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/reset.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -124,24 +125,28 @@
 
       <body>
 
-        <div class="wrapper">
-          <section class="mainContent">
+
+        <section class="mainContent">
           <div class="container">
             <div class="matching">
               <h3>matching!</h3>
               <p>○○さんへの申請が承認されました</p>
             </div>
-            <div class="profile_img">
-              <img src="src/img/3.jpg" alt="">
+            <div class="profile">
+              <div class="profile_img">
+                <img src="src/img/icon.png" alt="">
+              </div>
+              <div class="profile_text">
+                <ul>
+                  <li>　<span>name</span>----></li>
+                  <li>　<span>email</span>----></li>
+                  <li>　<span>profile</span>----></li>
+                </ul>
+              </div>
             </div>
-            <div class="profile_text">
-              <p>プロフィール</p>
-              <p>連絡先</p>
-            </div>
-            </div>
-          </section>
+          </div>
+        </section>
 
-        </div>
 
 
           <!-- ーーーーーーーーーーーーーーーーーfooterーーーーーーーーーーーーーーーーーーーーーー -->
