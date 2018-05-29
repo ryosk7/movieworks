@@ -4,7 +4,7 @@ $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 // アプリケーション設定
 define('CONSUMER_KEY', $_ENV['CONSUMER_KEY']);
-define('CALLBACK_URL', 'http://localhost/movieworks/redirect.php');
+define('CALLBACK_URL', 'http://localhost/phpensyu/movieworks/redirect.php');
 
 // URL
 define('AUTH_URL', 'https://accounts.google.com/o/oauth2/auth');

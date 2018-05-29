@@ -1,3 +1,49 @@
+<?php
+ session_start();
+ // $u_id = $_SESSION["id"];
+ // $name = $_SESSION["name"];
+ // $picture = $_SESSION["picture"];
+ ?>
+
+ <?php
+
+ define('INFO_URL', 'https://www.googleapis.com/oauth2/v1/userinfo');
+
+ $db_name = "movieworks";
+ $host_name = "localhost";
+ $p_id = "root";
+ $p_pass = "";
+
+ $pdo = new PDO("mysql:dbname={$db_name};
+ 								host={$host_name}; charset=utf8mb4",
+ 								"{$p_id}", "{$p_pass}");
+
+
+ $list = $pdo -> prepare("SELECT * FROM token");
+
+ $list -> execute();
+
+ if (!$list) {
+ 	echo "ERROR";
+ }else {
+ 	echo <<< EOM
+
+EOM;
+
+  while ($data = $list -> fetch()) {
+ 	 $access_token = $data["u_token"];
+  }
+ }
+
+ $params = array('access_token' => $access_token);
+
+ // ユーザー情報取得
+ $res = file_get_contents(INFO_URL . '?' . http_build_query($params));
+
+ //表示
+ $result = json_decode($res, true);
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,8 +174,8 @@ $(function() {
           <div class="prof-all">
           <div class="prof-body">
             <div class="prof-icon">
-              <img src="src/img/icon.jpeg" alt="">
-              <h1>Yukio Orita</h1>
+              <img src="<?php echo $result['picture'] ?>" alt="">
+              <h1><?php echo $result['name'] ?></h1>
             </div>
             <div class="prof-text">
               <h3 class="prof-title">Profile</h3>
