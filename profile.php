@@ -131,33 +131,54 @@ $(function() {
               <img src="src/img/icon.jpeg" alt="">
               <h1>Yukio Orita</h1>
             </div>
+
             <div class="prof-text">
+
+              <div class="movie_up_btn">
+                <input type="button" id="movie_button" value="  MOVIE UPLOAD  " />
+              </div>
+
+              <div class="prof-movie">
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+                <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <div class="prof_prof">
+
+
               <h3 class="prof-title">Profile</h3>
               <form action="" method="post" id="mail_form">
-                <dl>
+                <table>
+                  <tr >
 
-                  <dt> メールアドレス <span></span></dt>
-                  <dd class="required">
+                  <th>mail</th>
+                  <td class="required">
                     AAAAAAAA＠gmail.com
-                  </dd>
-
-                  <dt> 地域 <span></span></dt>
-                  <dd class="required">
+                  </td>
+                  </tr>
+                  <th>area</th>
+                  <td class="required">
                     大日本帝国
-                  </dd>
-
-                  <dt> プロフィール <span></span></dt>
-                  <dd class="required"><textarea id="mail_contents" name="mail_contents" cols="40" rows="10"></textarea></dd>
-                </dl>
-
-                <p id="form_submit">
-                  <input type="button" id="form_submit_button" value="  更新  " />
-                </p>
+                  </td>
+                  </tr>
+                  <tr>
+                    <th>profile</th>
+                    <td class="required"><textarea id="mail_contents" name="mail_contents" cols="40" rows="10"></textarea></td>
+                  </tr>
+                  <tr >
+                    <td colspan="2">
+                    <input type="button" id="form_submit_button" value="  UPDATE  " />
+                    </td>
+                  </tr>
+                </table>
               </form>
+              </div>
             </div>
-            <div class="prof-movie">
-              <iframe width="350" height="230" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
-            </div>
+
           </div>
           </div>
         </section>
@@ -181,7 +202,9 @@ $(function() {
                     <li class="facebook sbtn">
                       <a href="#" target="_blank">
                         <div class="sbtn_in">
-                          <p class="icon-facebook"></p>
+                          <!-- <p class="icon-facebook"> -->
+                            <img src="src/img/icon_face.png" alt="">
+                           <!-- </p> -->
                           <div class="slide reset"><span class="icon-facebook"></span></div>
                         </div>
                       </a>
@@ -189,7 +212,8 @@ $(function() {
                     <li class="twitter sbtn">
                       <a href="#" target="_blank">
                         <div class="sbtn_in">
-                          <p class="icon-twitter"></p>
+                          <!-- <p class="icon-twitter"></p> -->
+                          <img src="src/img/icon_twitter.png" alt="">
                           <div class="slide reset"><span class="icon-twitter"></span></div>
                         </div>
                       </a>
@@ -197,7 +221,8 @@ $(function() {
                     <li class="instagram sbtn">
                       <a href="#" target="_blank">
                         <div class="sbtn_in">
-                          <p class="icon-instagram"></p>
+                          <!-- <p class="icon-instagram"></p> -->
+                          <img src="src/img/icon_insta.png" alt="">
                           <div class="slide reset"><span class="icon-instagram"></span></div>
                         </div>
                       </a>

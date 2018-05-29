@@ -228,18 +228,19 @@ p {
 }
 
 #footer .right ul li .sbtn_in {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  text-align: center;
-  line-height: 35px;
-  overflow: hidden;
-  position: relative;
-  z-index: 10;
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
+    width: 35px;
+    height: 35px;
+    /* border-radius: 50%;
+    border: 1px solid #fff; */
+    /* background-color: #fff; */
+    text-align: center;
+    /* line-height: 35px; */
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
 
 #footer .right ul li .sbtn_in p {
@@ -266,4 +267,7 @@ p {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.sbtn_in img {
+  z-index: 99;
 }

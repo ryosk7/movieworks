@@ -1,63 +1,103 @@
 
 .prof-all{
-  
+
 }
 .prof-body{
   width: 960px;
   margin: 50px auto;
-  padding: 25px 0px 0px 120px;
+  padding-top: 25px;
   background: #ffffff;
   border: 1px solid #cccccc;
   border-radius: 7px;
   box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 );
 
-  height: 1133px;
-
+  height: 1800px;
+  text-align: center;
 }
-.prof-icon{
-  width: 100px;
-  /* margin: auto; */
-  margin-top: 30px;
-  margin-left: 325px;
-  margin-bottom: 140px;
+.prof-icon img{
+  width:180px;
+  margin-top:20px;
 }
 .prof-icon h1{
-  font-size: 44px;
-  width: 320px;
-  margin-left: -3px;
+  margin: 0px;
+  font-size: 30px;
+  /* width: 320px;
+  margin-left: -3px; */
 }
 
 .prof-text{
   position: relative;
-  float: left;
-  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
   /* width: 640px; */
 }
-
-.prof-title {
-  font-size: 2.4rem;
-  margin-top: 0px;
+.movie_up_btn {
+  margin-bottom:50px;
 }
-
-dl {
-  margin-top: 0;
+#movie_button {
+  width:150px;
+  height:50px;
+  /* margin-right: 20px; */
+  padding: 0.3em 1em;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  border: solid 2px #000;
+  border-radius: 3px;
+  transition: .4s;
 }
-
-dt {
-  display: inline-block;
-  margin-bottom: .4em;
-  padding: .2em .4em;
-  border-radius: 4px;
-  background: #ccb86c;
+#movie_button:hover {
+    background: #fff;
+    color: #000;
 }
-
-dd {
-  margin: 0 0 24px;
-}
-
 .prof-movie {
   position: relative;
-  float: left;
-  /* width: 50%; */
-  padding-top: 92px;
+  width:100%;
+  margin-left: 5px;
+}
+.prof-movie iframe{
+  margin:10px 10px 0 10px;
+}
+
+.prof_prof {
+  width:100%;
+  height:748px;
+  margin-top:100px;
+  background-color: #eee;
+  text-align: center;
+}
+.prof-title {
+  line-height: normal;
+  font-size: 30px;
+  margin:0;
+  padding-top:50px;
+  padding-bottom:30px;
+}
+.prof_prof table {
+  width:650px;
+  margin:auto;
+  background-color:#fff;
+  padding-bottom: 10px;
+}
+.prof_prof th {
+  width:200px;
+}
+.prof_prof td {
+  height:100px;
+}
+#form_submit_button {
+    width:120px;
+    height:40px;
+    margin-right: 20px;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    border: solid 2px #000;
+    border-radius: 3px;
+    transition: .4s;
+}
+#form_submit_button:hover {
+    background: #fff;
+    color: #000;
 }
