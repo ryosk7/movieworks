@@ -144,23 +144,23 @@ $(function() {
         <ul class="Menu">
           <li><a href="#top"  onclick="nav_close()">home</a></li>
           <li><a href="#section-target"  onclick="nav_close()">profile</a></li>
-          <li><a href="#workSection"  onclick="nav_close()">garally</a></li>
+          <li><a href="#workSection"  onclick="nav_close()">gallery</a></li>
           <li><a href=""  onclick="nav_close()">push</a></li>
         </ul>
 
       </div>
       <div id="nav">
         <div class="nav_cont">
-          <a href="index.html">
-            <div class="home_btn">
 
+            <div class="home_btn">
+              <a href="index.html"><img src="src/img/MW_Logo.png" alt="" class="movieworks_logo"></a>
             </div>
-          </a>
+
           <ul>
-            <li><a href="#"><img src="src/img/icon_home.png" alt="" class="header_icon"><p>home</p></a></li>
-            <li><a href="#"><img src="src/img/icon_prof.png" alt="" class="header_icon"><p>profile</p></a></li>
-            <li><a href="#"><img src="src/img/icon_serch.png" alt="" class="header_icon"><p>garally</p></a></li>
-            <li><a href="#"><img src="src/img/icon_note.png" alt="" class="header_icon"><p>push</p></a></li>
+            <li><a href="#"><img src="src/img/home.png" alt="" class="header_icon"><p>home</p></a></li>
+            <li><a href="#"><img src="src/img/prof.png" alt="" class="header_icon"><p>profile</p></a></li>
+            <li><a href="#"><img src="src/img/serch.png" alt="" class="header_icon"><p>gallery</p></a></li>
+            <li><a href="#"><img src="src/img/note.png" alt="" class="header_icon"><p>push</p></a></li>
           </ul>
           <a id="menu_btn" href="javascript:void(0)" onclick="nav_open()" class="nav_menu_btn">&Congruent;
           </a>
@@ -239,7 +239,7 @@ $(function() {
             <div class="inner">
               <div class="cf">
                 <div class="left">
-                  <a class="logo" href="#"></a>
+                  <a class="logo" href="#"><img src="src/img/MW_Logo.png" alt=""></a>
                   <p>© PHPkenshu all rights reserved.</p>
                 </div><!-- .left -->
                 <div class="right">
