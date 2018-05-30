@@ -1,6 +1,8 @@
 <?php session_start(); ?>
 <?php require_once 'vendor/autoload.php';  ?>
 <?php
+session_start();
+
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
@@ -69,7 +71,7 @@ echo strlen($access_token);
 ?>
 
 <?php
-$db_name = "movieworks";
+$db_name = $_ENV['DB_NAME'];
 $host_name = "localhost";
 $p_id = "root";
 $p_pass = "";
@@ -119,6 +121,8 @@ $picture = $_SESSION["picture"];
 		<tr><td>ユーザー名</td><td><?php echo $name; ?></td></tr>
 	</table>
 	<h2>プロフィール画像</h2>
-	<img src="<?php echo $picture; ?>" width="100"> -->
+	<img src="<?php echo $result['picture']; ?>" width="100">
+	<br>
+	<?=$htmlBody?>
 </body>
 </html>
